@@ -1,0 +1,42 @@
+# This is the gitignore for my Arch linux home folder template
+#  Efrem Rensi 09/2020
+
+.wakatime.db
+.node_repl_history
+.lesshst
+.bash_history
+go/
+Downloads/
+.zoom/
+.ssh/
+.psensor
+.pki
+.npm
+.node_modules_global
+.mozilla
+.local
+.gnupg
+.fontconfig
+.fltk
+.cache
+.cargo
+
+# only elinks.conf
+.config/.elinks/
+!.config/.elinks/elinks.conf
+
+.config/aerc/accounts.conf
+
+.config/chromium/
+.config/font-manager/
+.config/fontconfig/
+.config/get-3.0/
+.config/pulse
+.config/sublime-merge/
+.config/kak/plugins/
+.config/micro/buffers/
+.config/sublime-text-3/
+!.config/sublime-text-3/Packages/User/
+
+.config/QtProject.conf
+

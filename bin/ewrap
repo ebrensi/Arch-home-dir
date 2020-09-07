@@ -1,0 +1,16 @@
+#!/usr/bin/bash
+
+if [ -n "$TMUX" ]; then
+    # tmux session running
+    tmux split-window -h $EDITOR "$*"
+
+   elif [[ "$TERM" == "linux" ]]; then
+    $EDITOR "$*"
+
+   elif [[ "$TERM" == "xterm-kitty" ]]; then
+    kitty @ launch $EDITOR "$*"
+
+   else
+     alacritty -e $EDITOR "$*" &
+fi
+

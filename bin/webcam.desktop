@@ -1,0 +1,14 @@
+[Desktop Entry]
+Name=Webcam
+GenericName=Webcam
+GenericName[en_US]=Webcam
+Comment=View Webcam in MPV
+Exec=webcam
+NoDisplay=false
+Terminal=false
+Type=Application
+Categories=Webcam;Camera;Mirror;Viewer;
+MimeType=
+Name[en_US]=Webcam
+Icon=/usr/share/icons/Adwaita/256x256/legacy/camera-web.png
+Keywords=photo;picture;
