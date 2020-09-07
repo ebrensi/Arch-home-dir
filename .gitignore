@@ -35,6 +35,7 @@ Downloads/
 .config/sublime-merge/
 .config/kak/plugins/
 .config/micro/buffers/
+.config/nnn/.selection
 .config/sublime-text-3/
 !.config/sublime-text-3/Packages/User/
 
