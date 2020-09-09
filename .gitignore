@@ -28,6 +28,7 @@ Downloads/
 .config/aerc/accounts.conf
 
 .config/chromium/
+.config/dconf/
 .config/font-manager/
 .config/fontconfig/
 .config/get-3.0/

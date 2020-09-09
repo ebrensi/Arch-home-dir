@@ -23,6 +23,8 @@ set $rofimenu rofi -show drun -show-icons
 # Emoji/symbol picker
 set $rofimoji rofimoji --copy-only
 
+set $toggleWaybar killall -SIGUSR1 waybar
+
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
@@ -99,6 +101,9 @@ input "2:7:SynPS/2_Synaptics_TouchPad" {
 
     # Reload the configuration file
     bindsym $mod+Shift+c reload
+
+    bindsym $mod+x exec $toggleWaybar
+
 #
 # Moving around:
 #
