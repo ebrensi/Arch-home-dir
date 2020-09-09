@@ -25,6 +25,8 @@ set $rofimoji rofimoji --copy-only
 
 set $toggleWaybar killall -SIGUSR1 waybar
 
+set $filePicker alacritty -t="filePicker" -e EDITOR=micro; nnn
+
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
@@ -104,6 +106,7 @@ input "2:7:SynPS/2_Synaptics_TouchPad" {
 
     bindsym $mod+x exec $toggleWaybar
 
+    bindsym $mod+p exec $filePicker
 #
 # Moving around:
 #
@@ -247,6 +250,7 @@ font pango: FiraCode 14px
 # Indicate which windows float by default
 for_window [app_id="pavucontrol"] floating enable
 for_window [app_id="mpv"]  floating enable, position center, sticky enable, border none
+for_window [title="filePicker"] floating enable, resize set 300px 500px
 
 # Assign apps to workspaces
 assign [app_id="psensor"] workspace 6
