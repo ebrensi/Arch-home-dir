@@ -6,6 +6,7 @@
 
 .lesshst
 go/
+dev/
 Downloads/
 .zoom/
 .ssh/
@@ -29,6 +30,8 @@ dev/heatflask/
 .config/aerc/accounts.conf
 
 .config/chromium/
+.config/configstore/
+.config/dconf/
 .config/font-manager/
 .config/fontconfig/
 .config/get-3.0/
