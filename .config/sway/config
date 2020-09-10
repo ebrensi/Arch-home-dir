@@ -139,7 +139,16 @@ input "2:7:SynPS/2_Synaptics_TouchPad" {
     bindsym $mod+8 workspace number 8
     bindsym $mod+9 workspace number 9
     bindsym $mod+0 workspace number 10
-    # Move focused container to workspace
+
+
+    # Or use $mod+[up|down|left|right]
+    bindsym $mod+Left focus left
+    bindsym $mod+Down focus down
+    bindsym $mod+Up focus up
+    bindsym $mod+Right focus right
+
+    # Move the focused window with the same, but add Shift
+    # bindsym $mod+# Move focused container to workspace
     bindsym $mod+Shift+1 move container to workspace number 1
     bindsym $mod+Shift+2 move container to workspace number 2
     bindsym $mod+Shift+3 move container to workspace number 3
@@ -274,44 +283,12 @@ mode "$mode_system" {
 }
 bindsym $mod+Shift+e mode "$mode_system"
 
-bindsym $mod+Shift+q exec $nag -t warning -m 'Exit Dialog:' \
- 				-b 'Lock'     $lock 'swaylock -f -c 000000' \
-			  	-b 'Suspend'  'systemctl suspend' \
-				-b 'Reboot'   'systemctl reboot' \
-				-b 'Shutdown' 'systemctl poweroff -i'
-
-# Make nag mode dialog keyboard friendly
-#  see https://wiki.archlinux.org/index.php/Sway
-swaynag_command swaynagmode
-
-set $nag exec swaynagmode
-mode "nag" {
-  bindsym {
-    Ctrl+d    mode "default"
-
-    Ctrl+c    $nag --exit
-    q         $nag --exit
-    Escape    $nag --exit
-
-    Return    $nag --confirm
-
-    Tab       $nag --select prev
-    Shift+Tab $nag --select next
-
-    Left      $nag --select next
-    Right     $nag --select prev
-
-    Up        $nag --select next
-    Down      $nag --select prev
-  }
-}
-
 include /etc/sway/config.d/*
 
 #
 # Autostart -- stuff to run on start
 #
-exec psensor
+
 exec gammastep
 exec mako
 
