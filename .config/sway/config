@@ -3,10 +3,12 @@
 
 xwayland disable
 
+
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
+
 # Home row direction keys, like vim
 set $left h
 set $down j
@@ -17,14 +19,18 @@ set $right l
 set $term alacritty
 set $term_alt kitty
 
-# Application launchers
+# Application lauchers
 set $rofimenu rofi -show drun -show-icons
+set $dmenu dmenu_path | bemenu | xargs swaymsg exec --
+set $wofimenu wofi --show drun --allow-images --height 420 --width 300
 
 # Emoji/symbol picker
 set $rofimoji rofimoji --copy-only
 
-set $toggleWaybar killall -SIGUSR1 waybar
+# print screen function via script
+set $printscreen $HOME/.config/sway/screenshot
 
+set $toggleWaybar killall -SIGUSR1 waybar
 set $filePicker alacritty -t="filePicker" -e EDITOR=micro; nnn
 
 ### Output configuration
@@ -38,23 +44,19 @@ output * background /usr/share/backgrounds/stars-wallpaper-2-1920x1080.jpg fill
 # Montitor configuration:
 #
 
-# Enable adaptive sync for any monitor that supports it
-# see https://wiki.archlinux.org/index.php/Variable_refresh_rate#Using_Sway
-output * adaptive_sync on
-
-#   output HDMI-A-1 resolution 1920x1080 position 1920,0
-#
-# You can get the names of your outputs by running: swaymsg -t get_outputs
+bindswitch --reload --locked lid:on output LVDS-1 disable
+bindswitch --reload --locked lid:off output LVDS-1 enable
 
 ### Idle configuration
 #
 # Example configuration:
 #
 # exec swayidle -w \
-         # timeout 300 'swaylock -f -c 000000' \
-         # timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-         # before-sleep 'swaylock -f -c 000000'
-
+#          timeout 300 'swaylock -f -c 000000' \
+#          timeout 600 'swaymsg "output * dpms off"' \
+#               resume 'swaymsg "output * dpms on"' \
+#          before-sleep 'swaylock -f -c 000000'
+#
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
@@ -82,10 +84,11 @@ input "2:7:SynPS/2_Synaptics_TouchPad" {
     # Kill focused window
     bindsym $mod+q kill
 
+    # keep window on every workspace
     bindsym $mod+s sticky toggle
 
-    # Start your launcher
-    bindsym $mod+d exec $rofimenu
+    # Start launcher
+    bindsym $mod+d exec $dmenu
     bindsym $mod+Slash exec $rofimenu
 
     # Copy emojis to clipboard
@@ -93,6 +96,8 @@ input "2:7:SynPS/2_Synaptics_TouchPad" {
 
     # attempt to open mpv with a link in the clipboard
     bindsym $mod+m exec mpv --ytdl $(wl-paste -n)
+
+    bindsym Print exec $printscreen
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -137,50 +142,43 @@ input "2:7:SynPS/2_Synaptics_TouchPad" {
 # Workspaces:
 #
     # Switch to workspace
-    bindsym $mod+1 workspace number 1
-    bindsym $mod+2 workspace number 2
-    bindsym $mod+3 workspace number 3
-    bindsym $mod+4 workspace number 4
-    bindsym $mod+5 workspace number 5
-    bindsym $mod+6 workspace number 6
-    bindsym $mod+7 workspace number 7
-    bindsym $mod+8 workspace number 8
-    bindsym $mod+9 workspace number 9
-    bindsym $mod+0 workspace number 10
+    bindsym $mod+1 workspace 1
+    bindsym $mod+2 workspace 2
+    bindsym $mod+3 workspace 3
+    bindsym $mod+4 workspace 4
+    bindsym $mod+5 workspace 5
+    bindsym $mod+6 workspace 6
+    bindsym $mod+7 workspace 7
+    bindsym $mod+8 workspace 8
+    bindsym $mod+9 workspace 9
+    bindsym $mod+0 workspace 10
 
-
-    # Or use $mod+[up|down|left|right]
-    bindsym $mod+Left focus left
-    bindsym $mod+Down focus down
-    bindsym $mod+Up focus up
-    bindsym $mod+Right focus right
-
-    # Move the focused window with the same, but add Shift
-    # bindsym $mod+# Move focused container to workspace
-    bindsym $mod+Shift+1 move container to workspace number 1
-    bindsym $mod+Shift+2 move container to workspace number 2
-    bindsym $mod+Shift+3 move container to workspace number 3
-    bindsym $mod+Shift+4 move container to workspace number 4
-    bindsym $mod+Shift+5 move container to workspace number 5
-    bindsym $mod+Shift+6 move container to workspace number 6
-    bindsym $mod+Shift+7 move container to workspace number 7
-    bindsym $mod+Shift+8 move container to workspace number 8
-    bindsym $mod+Shift+9 move container to workspace number 9
-    bindsym $mod+Shift+0 move container to workspace number 10
+    # Move focused container to workspace
+    bindsym $mod+Shift+1 move container to workspace 1
+    bindsym $mod+Shift+2 move container to workspace 2
+    bindsym $mod+Shift+3 move container to workspace 3
+    bindsym $mod+Shift+4 move container to workspace 4
+    bindsym $mod+Shift+5 move container to workspace 5
+    bindsym $mod+Shift+6 move container to workspace 6
+    bindsym $mod+Shift+7 move container to workspace 7
+    bindsym $mod+Shift+8 move container to workspace 8
+    bindsym $mod+Shift+9 move container to workspace 9
+    bindsym $mod+Shift+0 move container to workspace 10
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
 
-    # Bindings to move through workspaces
+    # Move through workspaces
     bindsym $mod+tab workspace next_on_output
     bindsym $mod+Shift+tab workspace prev_on_output
+
 #
 # Layout stuff:
 #
-    # Default borderstyle
+    # Default border styles
     default_border pixel 2
     default_floating_border pixel 1
 
-    # Toggle border style for the active window
+    # cycle through border styles for current window
     bindsym $mod+t border toggle
 
 
@@ -259,15 +257,9 @@ font pango: FiraCode 14px
 # Indicate which windows float by default
 for_window [app_id="pavucontrol"] floating enable
 for_window [app_id="mpv"]  floating enable, position center, sticky enable, border none
+for_window [app_id="gthumb"] floating enable, border pixel 2, resize set 400px 500px
 for_window [title="filePicker"] floating enable, resize set 300px 500px
 
-# Assign apps to workspaces
-assign [app_id="psensor"] workspace 6
-
-
-
-# Indicate if window is running under XWayland
-for_window [shell="xwayland"] title_format "<span>[X] %title</span>"
 
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
@@ -294,10 +286,14 @@ bindsym $mod+Shift+e mode "$mode_system"
 
 include /etc/sway/config.d/*
 
+
+
 #
-# Autostart -- stuff to run on start
+# Autostart
 #
 
 exec gammastep
-exec mako
+exec gammastep-indicator
 
+exec mako
+exec nm-applet --indicator
