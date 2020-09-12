@@ -6,4 +6,5 @@
 /_/  |_| |_|\___/|_| |_| |_|\___|
 
 ```
-General setup (not machine specific)
+Termux on Android device
+
