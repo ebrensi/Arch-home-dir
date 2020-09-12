@@ -2,7 +2,7 @@
 # ~/.bashrc
 #
 
-export VISUAL=$HOME/bin/ewrap
+export VISUAL=micro
 export EDITOR=micro
 export TERMINAL=$TERM
 
@@ -18,8 +18,8 @@ export PATH="$HOME/bin:$npm_config_prefix/bin:$PATH"
 
 # nnn settings via environment variables
 export LC_COLLATE="C"
-export NNN_BMS='c:~/.config;h:~/dev/heatflask;d:~/Downloads/'
-export NNN_PLUG='v:imgview;p:preview-tui;c:.cbcp;f:fzopen;l:launch;s:pskill;'
+export NNN_BMS='c:~/.config;h:~/dev/heatflask'
+export NNN_PLUG=''
 export NNN_COLORS="2136"               # use a different color for each context
 export NNN_TRASH=1                     # trash (needs trash-cli) instead of delete
 # export NNN_FCOLORS='c1e2272e006033f7c6d6abc4'
@@ -56,17 +56,4 @@ n ()
             rm -f "$NNN_TMPFILE" > /dev/null
     fi
 }
-
-
-# If not running interactively, we can leave now
-[[ $- != *i* ]] && return
-
-# set up Starship prompt
-eval "$(starship init bash)"
-
-
-
-# fzf stuff
-source /usr/share/fzf/completion.bash
-source /usr/share/fzf/key-bindings.bash
 
