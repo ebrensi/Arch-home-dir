@@ -1,0 +1,37 @@
+; FLTK preferences file format 1.0
+; vendor: fltk.org
+; application: fluid
+
+[.]
+
+scheme:0
+
+[./main_window_pos]
+
+x:10
+y:423
+w:300
+h:525
+visible:1
+
+[./widgetbin_pos]
+
+x:320
+y:423
+w:574
+h:85
+visible:1
+
+[./sourceview]
+
+autorefresh:1
+autoposition:1
+tab:0
+
+[./sourceview_pos]
+
+x:320
+y:120
+w:550
+h:500
+visible:0

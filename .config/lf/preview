@@ -1,0 +1,6 @@
+#!/bin/bash
+
+unset COLORTERM
+
+bat --plain --color=always --paging=never "$1"
+

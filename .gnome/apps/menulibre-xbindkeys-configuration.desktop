@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.1
+Type=Application
+Name=XBindKeys Configuration
+Comment=This is a gui front-end for xbindkeys.  It is a lower level control than the XFCE key-bindings settings.
+Icon=ibus-keyboard
+Exec=xbindkeys_config
+Actions=
+Categories=Settings;
+OnlyShowIn=Old;

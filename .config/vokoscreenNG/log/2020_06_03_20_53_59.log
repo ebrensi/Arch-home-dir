@@ -1,0 +1,93 @@
+[vokoscreenNG] Version: 3.0.4
+[vokoscreenNG] Locale: en_US
+[vokoscreenNG] Log from: 2020-06-03 20:53:59
+[vokoscreenNG] Country: United States
+[vokoscreenNG] Qt: 5.14.2
+[vokoscreenNG] GStreamer 1.16.2
+[vokoscreenNG] Operating system: Manjaro Linux
+[vokoscreenNG] CPU Architecture: x86_64
+[vokoscreenNG] vokoscreenNG running as: xcb client
+[vokoscreenNG] vokoscreenNG running on: x11
+[vokoscreenNG] Desktop: XFCE
+[vokoscreenNG] Icon-Theme: Papirus-Maia
+[vokoscreenNG] Styles: (bb10dark, bb10bright, kvantum-dark, kvantum, cleanlooks, gtk2, cde, motif, plastique, qt5ct-style, Windows, Fusion)
+[vokoscreenNG] Qt-PluginsPath:      /usr/lib/qt/plugins
+[vokoscreenNG] Qt-TranslationsPath: /usr/share/qt/translations
+[vokoscreenNG] Qt-LibraryPath:      /usr/lib
+[vokoscreenNG] Settings: /home/efrem/.config/vokoscreenNG/vokoscreenNG.ini
+[vokoscreenNG] Log: /home/efrem/.config/vokoscreenNG/log/2020_06_03_20_53_59.log
+[vokoscreenNG] CompositingManager running: true
+
+[vokoscreenNG] [PulseAudio] Found: QuickCam Pro for Notebooks Mono Device: alsa_input.usb-046d_0991_BE1D82F4-02.mono-fallback
+[vokoscreenNG] [PulseAudio] Found: Monitor of Dell Universal Dock D6000 Analog Stereo Device: alsa_output.usb-DisplayLink_Dell_Universal_Dock_D6000_1706220481-02.analog-stereo.monitor
+[vokoscreenNG] [PulseAudio] Found: Dell Universal Dock D6000 Analog Stereo Device: alsa_input.usb-DisplayLink_Dell_Universal_Dock_D6000_1706220481-02.analog-stereo
+[vokoscreenNG] [PulseAudio] Found: Monitor of Built-in Audio Analog Stereo Device: alsa_output.pci-0000_00_1b.0.analog-stereo.monitor
+[vokoscreenNG] [PulseAudio] Found: Built-in Audio Analog Stereo Device: alsa_input.pci-0000_00_1b.0.analog-stereo
+
+D-Bus system tray: no
+[vokoscreenNG] Symbols: + available, - not available
+[vokoscreenNG] + matroskamux
+[vokoscreenNG] + webmmux
+[vokoscreenNG] + avimux
+[vokoscreenNG] + mp4mux
+[vokoscreenNG] + qtmux
+[vokoscreenNG] + x264enc
+[vokoscreenNG] - openh264enc
+[vokoscreenNG] - vaapih264enc
+[vokoscreenNG] - vaapimpeg2enc
+[vokoscreenNG] + vp8enc
+[vokoscreenNG] + vorbisenc
+[vokoscreenNG] + flacenc
+[vokoscreenNG] + opusenc
+[vokoscreenNG] + lamemp3enc
+[vokoscreenNG] + faac
+
+[vokoscreenNG] + ximagesrc
+[vokoscreenNG] + pulsesrc
+[vokoscreenNG] - pipewiresrc
+[vokoscreenNG] + queue
+[vokoscreenNG] + capsfilter
+[vokoscreenNG] + videoconvert
+[vokoscreenNG] + videorate
+[vokoscreenNG] + audioconvert
+[vokoscreenNG] + audiorate
+[vokoscreenNG] + filesink
+[vokoscreenNG] + videoscale
+[vokoscreenNG] + h264parse
+[vokoscreenNG] + adder
+
+[vokoscreenNG] Name from screen:  HDMI-1-1
+[vokoscreenNG] Screen available desktop width : 1920
+[vokoscreenNG] Screen available desktop height: 1200
+[vokoscreenNG] DevicePixelRatio: 1  (Normal displays is 1, Retina display is 2)
+[vokoscreenNG] Vertical refresh rate of the screen in Hz: 59.9502
+[vokoscreenNG] Screen orientation Qt::LandscapeOrientation
+[vokoscreenNG] Color depth of the screen:  24
+[vokoscreenNG] Model from screen:  DELL 2408WFP-
+[vokoscreenNG] Manufactur from screen:  Dell Inc.
+[vokoscreenNG] SerialNumber from screen:  G283H8BC1W2S-
+[vokoscreenNG] ItemText in Combobox: HDMI-1-1 :  1920 x 1200
+[vokoscreenNG] ItemData in Combobox: x=0 y=284 with=1920 height=1200
+
+[vokoscreenNG] Name from screen:  VGA1
+[vokoscreenNG] Screen available desktop width : 1050
+[vokoscreenNG] Screen available desktop height: 1680
+[vokoscreenNG] DevicePixelRatio: 1  (Normal displays is 1, Retina display is 2)
+[vokoscreenNG] Vertical refresh rate of the screen in Hz: 59.9543
+[vokoscreenNG] Screen orientation Qt::PortraitOrientation
+[vokoscreenNG] Color depth of the screen:  24
+[vokoscreenNG] Model from screen:  DELL 2005FPW-
+[vokoscreenNG] Manufactur from screen:  Dell Inc.
+[vokoscreenNG] SerialNumber from screen:  T613056F0WPL-
+[vokoscreenNG] ItemText in Combobox: VGA1 :  1050 x 1680
+[vokoscreenNG] ItemData in Combobox: x=1920 y=0 with=1050 height=1680
+
+[vokoscreenNG] [Camera} Found: ASUS USB2.0 Webcam: ASUS USB2.0 /dev/video0
+[vokoscreenNG] [Camera} Found: UVC Camera (046d:0991) /dev/video2
+[vokoscreenNG] Desktop session is a X11 session
+[vokoscreenNG] QCamera::LoadingStatus
+[vokoscreenNG] QCamera::LoadedState
+[vokoscreenNG] QCamera::LoadedStatus
+[vokoscreenNG] QCamera::StartingStatus
+[vokoscreenNG] QCamera::ActiveState
+[vokoscreenNG] QCamera::ActiveStatus

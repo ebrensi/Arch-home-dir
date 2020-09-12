@@ -1,0 +1,17 @@
+2020-03-23 22:23:31.142 (0x7fff5ffe3470) Debug: New PolkitAgentListener  0x5618e9c46220
+2020-03-23 22:23:31.151 (0x7fff5ffe3470) Debug: Adding new listener  PolkitQt1::Agent::Listener(0x7fff5ffe3480) for  0x5618e9c46220
+2020-03-23 22:23:31.163 (0x7fff5ffe3470) Warning: "Cannot register authentication agent: GDBus.Error:org.freedesktop.PolicyKit1.Error.Failed: An authentication agent already exists for the given subject"
+2020-03-23 22:23:31.568 (0x7ffde19fdde0) Debug: registerService failed: another service with 'org.freedesktop.Notifications' runs already
+2020-03-23 22:23:31.624 (0x7ffe60ab9950) Debug: WinIdChange 7200006 handle QWidgetWindow(0x556cdd39d860, name="LXQtPanel panel1Window") QScreen(0x556cdd345da0, name="HDMI-1-1")
+2020-03-23 22:23:31.719 (0x7fffad1146f0) Debug: BatteryChanged discharging: false chargeLevel: 95.6917 actionTime: QTime(Invalid)
+2020-03-23 22:23:31.726 (0x7fffad1146f0) Debug: Inhibit got: 27
+2020-03-23 22:23:32.111 (0x7fffad1146f0) Debug: Starting idlenesswatcher
+2020-03-23 22:24:39.510 (0x7fffad1146f0) Debug: Inhibit got: 30
+2020-03-23 22:28:38.674 (0x7ffc39b5b1f0) Debug: registerService failed: another service with 'org.freedesktop.Notifications' runs already
+2020-03-23 22:28:38.691 (0x7ffc0f2382e0) Debug: New PolkitAgentListener  0x5567f05c3820
+2020-03-23 22:28:38.698 (0x7ffc0f2382e0) Debug: Adding new listener  PolkitQt1::Agent::Listener(0x7ffc0f2382f0) for  0x5567f05c3820
+2020-03-23 22:28:38.760 (0x7ffc0f2382e0) Warning: "Cannot register authentication agent: GDBus.Error:org.freedesktop.PolicyKit1.Error.Failed: An authentication agent already exists for the given subject"
+2020-03-23 22:28:38.784 (0x7ffeb34c20f0) Debug: BatteryChanged discharging: false chargeLevel: 95.6917 actionTime: QTime(Invalid)
+2020-03-23 22:28:38.795 (0x7ffe2899f8b0) Debug: WinIdChange 6200006 handle QWidgetWindow(0x555d25725530, name="LXQtPanel panel1Window") QScreen(0x555d256ccf70, name="HDMI-1-1")
+2020-03-23 22:28:38.819 (0x7ffeb34c20f0) Debug: Inhibit got: 27
+2020-03-23 22:28:38.819 (0x7ffeb34c20f0) Debug: Starting idlenesswatcher

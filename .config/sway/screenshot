@@ -1,0 +1,11 @@
+#!/bin/env sh
+
+# make a screenshot of the current monitor
+
+fname=$(xdg-user-dir PICTURES)/$(date +'screenshot_%s.png')
+display="$(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name')"
+
+grim -o $display $fname
+
+gthumb $fname
+

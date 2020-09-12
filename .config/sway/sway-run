@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# see https://github.com/swaywm/sway/wiki/Running-programs-natively-under-wayland
+
+export XDG_SESSION_TYPE=wayland
+
+# GTK3
+export MOZ_ENABLE_WAYLAND=1
+
+# Qt5
+export QT_QPA_PLATFORM=wayland-egl
+export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
+export QT_WAYLAND_FORCE_DPI=physical
+
+export SDL_VIDEODRIVER=wayland
+export ELM_DISPLAY=wl
+export ECORE_EVAS_ENGINE=wayland_egl
+export ELM_ENGINE=wayland_egl
+export ELM_ACCEL=opengl
+#export GDK_BACKEND=wayland
+
+unset GDK_BACKEND
+unset WAYLAND_DISPLAY
+
+exec sway

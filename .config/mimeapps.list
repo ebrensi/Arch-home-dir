@@ -1,0 +1,29 @@
+[Default Applications]
+application/octet-stream=mousepad.desktop
+application/pdf=qpdfview.desktop
+application/x-gettext-translation=mousepad.desktop
+application/xml=mousepad.desktop
+application/x-wine-extension-ini=mousepad.desktop
+text/plain=mousepad.desktop
+x-scheme-handler/mailto=userapp-Thunderbird-1SSHH0.desktop
+message/rfc822=userapp-Thunderbird-1SSHH0.desktop
+
+[Added Associations]
+image/png=org.gnome.gThumb.desktop;
+x-scheme-handler/mailto=exo-mail-reader.desktop;
+message/rfc822=userapp-Thunderbird-1SSHH0.desktop;
+text/plain=mousepad.desktop;sublime_text.desktop;
+text/html=org.qutebrowser.qutebrowser.desktop;chromium.desktop;sublime_text.desktop;
+image/webp=org.gnome.gThumb.desktop;
+application/xhtml+xml=firefox-developer-edition.desktop;org.midori_browser.Midori.desktop;netsurf.desktop;mousepad.desktop;
+application/javascript=sublime_text.desktop;
+application/x-shellscript=sublime_text.desktop;
+application/octet-stream=sublime_text.desktop;
+text/x-python=sublime_text.desktop;
+x-scheme-handler/http=exo-web-browser.desktop;
+x-scheme-handler/https=exo-web-browser.desktop;
+inode/directory=exo-file-manager.desktop;
+x-scheme-handler/trash=exo-file-manager.desktop;
+audio/x-scpls=vlc.desktop;
+application/x-tar=org.manjaro.pamac.manager.desktop;pamac-manager.desktop;
+
