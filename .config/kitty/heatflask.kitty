@@ -1,0 +1,9 @@
+cd ~/Dropbox/Coding/Projects/Heatflask
+
+launch tig
+
+cd ~/Dropbox/Coding/Projects/Heatflask/frontend
+launch npm run watch
+
+cd ~/Dropbox/Coding/Projects/Heatflask/backend
+launch bash -c 'source ~/.venv/heatflask/bin/activate; ./dev-run'

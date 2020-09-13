@@ -1,0 +1,14 @@
+[Default Applications]
+x-scheme-handler/mailto=gnome-gmail.desktop
+x-scheme-handler/http=org.midori_browser.Midori.desktop
+text/html=chromium.desktop
+x-scheme-handler/https=org.midori_browser.Midori.desktop
+application/xhtml+xml=org.midori_browser.Midori.desktop
+
+[Added Associations]
+x-scheme-handler/mailto=org.gnome.Geary.desktop;gnome-gmail.desktop;
+x-scheme-handler/http=chromium.desktop;org.midori_browser.Midori.desktop;
+text/html=chromium.desktop;org.midori_browser.Midori.desktop;
+x-scheme-handler/https=chromium.desktop;org.midori_browser.Midori.desktop;
+application/octet-stream=org.gnome.gedit.desktop;
+application/xhtml+xml=org.midori_browser.Midori.desktop;

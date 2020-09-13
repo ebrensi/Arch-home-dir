@@ -1,0 +1,19 @@
+{
+    "*.js": {
+        "tabsize": 2
+    },
+    "backup": false,
+    "basename": true,
+    "colorscheme": "solarized",
+    "diffgutter": true,
+    "ignorecase": true,
+    "pluginchannels": [
+        "https://raw.githubusercontent.com/micro-editor/plugin-channel/master/channel.json"
+    ],
+    "pluginrepos": [],
+    "rmtrailingws": true,
+    "smartpaste": false,
+    "statusformatl": "$(filename)|ft:$(opt:filetype)",
+    "statusformatr": "$(modified)($(line)) $(status.paste)",
+    "tabstospaces": true
+}

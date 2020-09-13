@@ -1,0 +1,47 @@
+# Cobalt color scheme
+# Editor colors
+color-link default "#FFFFFF,#005f87"
+# #09223F
+color-link cursor-line "#003b70"
+# color-link color-column "#26425D"
+color-link statusline "#F8F8F8,#008AFF"            
+color-link tabbar "#F8F8F8,#008AFF"               
+color-link indent-char "#F8F8F8,#09223F"           
+# Line number colour scheme
+color-link line-number "#888888,#111111"           
+color-link current-line-number "#888888,#111111"   
+# Gutter color scheme
+color-link gutter-info "#00BF8C"
+color-link gutter-error "#990000"
+color-link gutter-warning "#FF518C"
+# Message color scheme
+color-link message "#0088FF"
+color-link error-message "#990000"
+# Syntax colors
+color-link error "bold #990000"
+# comment
+color-link comment "#0088FF"
+# identifier
+color-link identifier "#80ffbb"
+color-link identifier.var "#80ffbb"
+# constant and subgroups
+color-link constant "#ffee80"
+color-link constant.string "#42D915"
+color-link constant.number "#FF518C"
+color-link constant.bool "#42D915"
+# statement
+color-link statement "bold #FA9E18"
+# symbol and subgroups
+color-link symbol "#FA9E18"
+color-link symbol.bracket "#FA9E18"
+# color-link symbol.brackets "default"
+# preproc and subgroups
+color-link preproc "#80ffbb"
+color-link preproc.shebang "#0088FF"    
+# type and subgroups
+color-link type "bold #FA9E18"
+# color-link type "bold #80ffbb"
+# special
+color-link special "bold #ff9d00"
+# todo
+color-link todo "bold #ffee80"

@@ -11,6 +11,8 @@ wp*
 
 .elinks/globhist
 .elinks/gotohist
+.elinks/cookies
+.elinks/exmodehist
 
 .fonts/
 .fzf/
@@ -26,11 +28,13 @@ wp*
 .pki/
 .pnpm*
 .pylint*
+.rustup/
 .psensor/log
 .ssh/
 .ssr/
 .themes/
 .thumbnails/
+.var/
 .venv/
 .zoom/
 
@@ -47,9 +51,13 @@ Templates/
 Videos/
 dev/
 go/
-
+mail/
+tar
 
 ..Xauthority.swp
+.history
+.pythonhist
+.wget-hsts
 .*_history
 .face
 .lesshst
@@ -58,13 +66,20 @@ go/
 .viminfo
 .wakatime.*
 .xsession-errors*
+.xournal/recent-files
+.xournalpp/autosave/
+.xournalpp/errorlogs/
+.xournalpp/metadata/
+
 package-lock.json
 
 
 # ignores for individual config directories
-.config/Electron
+.config/autostart/
+.config/BraveSoftware/
+.config/Electron/
 
-.config/Min
+.config/Min/
 !.config/Min/userscripts/
 !.config/Min/settings.json
 
@@ -73,13 +88,18 @@ package-lock.json
 .config/autostart/
 .config/bashtop/error.log
 .config/chromium/
+.config/com.github.xournalpp.xournalpp/autosave/
+.config/com.github.xournalpp.xournalpp/errorlogs/
 .config/configstore/
 .config/google-chrome-unstable/
-
+.config/evolution/
+.config/fish/
 .config/gthumb/
-.config/gtk-2.0/
-.config/gtk-3.0/
+.config/gnome-session/
+.config/gtk-*
 .config/ibus/
+
+.config/libreoffice/
 .config/luna/
 
 .config/micro/backups/
@@ -92,8 +112,11 @@ package-lock.json
 .config/nnn/mounts/
 .config/nnn/sessions/
 
+.config/plank/
 .config/pulse/
 .config/solaar/
+.config/sublime-merge/
+!.config/sublime-merge/Packages/User/
 
 .config/sublime-text-3/
 !.config/sublime-text-3/Packages/User/
@@ -103,3 +126,6 @@ package-lock.json
 .config/xfce4/
 
 log.txt
+*.log
+
+

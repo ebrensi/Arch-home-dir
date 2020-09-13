@@ -1,0 +1,27 @@
+[General]
+field=PID, TTY, USER, STAT, MEM, %CPU, START, TIME, COMMAND_LINE
+flags=ExitOnClose, infobar, ctrlbar, statbar, autosave, cpubar, loadgraph, loadicon, selectpids, tree, hostname, service
+interval=1300
+version=40
+viewproc=0
+
+[commands]
+size=0
+
+[font]
+name=DejaVu Sans
+size=10
+
+[geometry]
+height=809
+visiable=true
+width=1160
+x=254
+y=143
+
+[sort]
+field=%CPU
+reversed=false
+
+[watchdog]
+size=0
