@@ -77,6 +77,7 @@ package-lock.json
 # ignores for individual config directories
 .config/autostart/
 .config/BraveSoftware/
+.config/dconf/
 .config/Electron/
 
 .config/Min/
