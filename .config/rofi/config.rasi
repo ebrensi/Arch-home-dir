@@ -1,0 +1,19 @@
+configuration {
+	width: 40;
+	lines: 10;
+	columns: 2;
+	font: "Coda Bold 11";
+	bw: 4;
+	padding: 40;
+	show-icons: true;
+	eh: 1;
+	auto-select: false;
+	matching: "fuzzy";
+	line-margin: 10;
+	separator-style: "solid";
+	hide-scrollbar: false;
+	color-normal: "argb:00252936, #ffffff, argb:00252936, argb:009575cd, #2BC1A4";
+	color-urgent: "argb:00252936, #ff0000, argb:00252936, argb:00252936, #ff0000";
+	color-active: "argb:00252936, #252936, argb:00252936, argb:009575cd, #ffc000";
+	color-window: "argb:cc252936, #2BC1A4, #2BC1A4";
+}

@@ -1,0 +1,4 @@
+launch dmesg -Hw
+
+launch journalctl -f
+

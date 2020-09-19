@@ -1,0 +1,5 @@
+bind status P !git push
+
+set refresh-mode = periodic
+set refresh-interval = 300
+

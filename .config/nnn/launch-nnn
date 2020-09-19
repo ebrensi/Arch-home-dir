@@ -1,0 +1,5 @@
+#!/bin/env sh
+
+source $HOME/.config/nnn/nnn-setup
+
+n

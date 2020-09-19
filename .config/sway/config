@@ -32,6 +32,7 @@ set $printscreen $HOME/.config/sway/screenshot
 set $toggleWaybar killall -SIGUSR1 waybar
 set $filePicker alacritty -t="filePicker" -e EDITOR=micro; nnn
 
+set $lock swaylock -f -l -c 2000ff --indicator-radius 100 --indicator-thickness 20
 
 #
 # Montitor configuration for Desktop arrangent:
@@ -47,12 +48,12 @@ bindswitch --reload --locked lid:off output LVDS-1 enable7
 #
 # Example configuration:
 #
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * dpms off"' \
-#               resume 'swaymsg "output * dpms on"' \
-#          before-sleep 'swaylock -f -c 000000'
-#
+exec swayidle -w \
+    # timeout 300 $lock \
+    timeout 600 'swaymsg "output * dpms off"' \
+    resume 'swaymsg "output * dpms on"' \
+    # before-sleep $lock
+
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.

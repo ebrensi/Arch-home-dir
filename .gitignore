@@ -12,6 +12,7 @@ wp*
 .elinks/globhist
 .elinks/gotohist
 
+.dillo/
 .fonts/
 .gnupg/
 .ipython/
