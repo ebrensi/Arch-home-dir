@@ -71,11 +71,14 @@ package-lock.json
 .config/bashtop/error.log
 .config/chromium/
 .config/configstore/
+.config/dconf
 .config/google-chrome-unstable/
+.config/gconf
 
 .config/gthumb/
 .config/gtk-2.0/
 .config/gtk-3.0/
+.config/htop/
 .config/ibus/
 .config/luna/
 
