@@ -116,12 +116,43 @@ if ! shopt -oq posix; then
   fi
 fi
 
-source ~/Dropbox/.config/.bashrc
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
 
 # tabtab source for packages
 # uninstall by removing these lines
 [ -f ~/.config/tabtab/bash/__tabtab.bash ] && . ~/.config/tabtab/bash/__tabtab.bash || true
+
+
+# Stuff I added
+export PATH="$HOME/.node_modules_global/bin:$HOME/Dropbox/scripts:$HOME/go/bin:$PATH"
+alias subl='subl -a'
+
+if type exa > /dev/null; then
+  alias ls='exa'
+  alias l='exa -l --all --group-directories-first --git'
+  alias ll='exa -l --all --all --group-directories-first --git'
+  alias lt='exa -T --git-ignore --level=2 --group-directories-first'
+  alias llt='exa -lT --git-ignore --level=2 --group-directories-first'
+  alias lT='exa -T --git-ignore --level=4 --group-directories-first'
+else
+  alias l='ls -lah'
+  alias ll='ls -alF'
+  alias la='ls -A'
+fi
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# Use bat instead of cat
+alias cat="bat --paging=never"
+export MANPAGER="sh -c 'col -bx | bat -1 man -p'"
+export BAT_PAGER="less -nRF"
+
+export EDITOR=micro
+export MICRO_TRUECOLOR=1
+
+# Enable fzf keybindings and completions
+[ -f /usr/share/fzf/key-bindings.bash ] && source /usr/share/fzf/key-bindings.bash
+[ -f /usr/share/fzf/completion.bash ] && source /usr/share/fzf/completion.bash
+
+source ~/.config/nnn/nnnrc
 
  eval "$(starship init bash)"
