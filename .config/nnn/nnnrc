@@ -1,0 +1,48 @@
+#!/bin/env sh
+
+##
+#  Source this file to enable custom nnn features
+##
+
+export VISUAL=$HOME/bin/ewrap
+
+# We store npm packages locally to avoid giving them elevated priviledges
+export npm_config_prefix=$HOME/.node_modules_global
+export PATH="$HOME/bin:$npm_config_prefix/bin:$PATH"
+
+# nnn settings via environment variables
+export LC_COLLATE="C"
+export NNN_BMS='c:~/.config;h:~/dev/heatflask;d:~/Downloads/'
+export NNN_PLUG='v:imgview;p:preview-tui;c:.cbcp;f:fzopen;l:launch;s:pskill;'
+export NNN_COLORS="2136"               # use a different color for each context
+export NNN_TRASH=1                     # trash (needs trash-cli) instead of delete
+# export NNN_FCOLORS='c1e2272e006033f7c6d6abc4'
+export NNN_OPENER="$HOME/.config/nnn/plugins/nuke"
+export NNN_OPTS="EAoac"
+
+# for nuke launcher
+export GUI=1
+
+# Set up environment for nnn
+n ()
+{
+        # Block nesting of nnn in subshells
+    if [ -n $NNNLVL ] && [ "${NNNLVL:-0}" -ge 1 ]; then
+        echo "nnn is already running"
+        return
+    fi
+
+    # The default behaviour is to cd on quit (nnn checks if NNN_TMPFILE is set)
+    # To cd on quit only on ^G, remove the "export" as in:
+    #     NNN_TMPFILE="${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.lastd"
+    # NOTE: NNN_TMPFILE is fixed, should not be modified
+
+    NNN_TMPFILE="${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.lastd"
+
+    nnn "$@"
+
+    if [ -f "$NNN_TMPFILE" ]; then
+            . "$NNN_TMPFILE"
+            rm -f "$NNN_TMPFILE" > /dev/null
+    fi
+}
