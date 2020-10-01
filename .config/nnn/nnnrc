@@ -4,21 +4,20 @@
 #  Source this file to enable custom nnn features
 ##
 
-export VISUAL=$HOME/bin/ewrap
+export VISUAL=${XDG_CONFIG_HOME:-$HOME/.config}/nnn/ewrap
 
-# We store npm packages locally to avoid giving them elevated priviledges
-export npm_config_prefix=$HOME/.node_modules_global
-export PATH="$HOME/bin:$npm_config_prefix/bin:$PATH"
+export TERMINAL=$TERM
 
 # nnn settings via environment variables
 export LC_COLLATE="C"
-export NNN_BMS='c:~/.config;h:~/dev/heatflask;d:~/Downloads/'
-export NNN_PLUG='v:imgview;p:preview-tui;c:.cbcp;f:fzopen;l:launch;s:pskill;'
+export NNN_BMS="c:~/.config;h:~/dev/heatflask;d:~/Downloads/"
+export NNN_PLUG="v:imgview;p:preview-tui;f:fzopen;s:pskill;"
 export NNN_COLORS="2136"               # use a different color for each context
 export NNN_TRASH=1                     # trash (needs trash-cli) instead of delete
-# export NNN_FCOLORS='c1e2272e006033f7c6d6abc4'
+export NNN_FCOLORS='c1e2272e006033f7c6d6abc4'
 export NNN_OPENER="$HOME/.config/nnn/plugins/nuke"
-export NNN_OPTS="EAoac"
+export NNN_OPTS="EAoc"
+export NNN_FIFO=/tmp/nnn.fifo
 
 # for nuke launcher
 export GUI=1

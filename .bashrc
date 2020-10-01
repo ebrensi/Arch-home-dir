@@ -25,6 +25,8 @@ export BAT_PAGER="less -nRF"
 # it regains control.  #65623
 # http://cnswww.cns.cwru.edu/~chet/bash/FAQ (E11)
 shopt -s checkwinsize
+
+
 # We store npm packages locally to avoid giving them elevated priviledges
 export npm_config_prefix=$HOME/.node_modules_global
 export PATH="$HOME/bin:$npm_config_prefix/bin:$PATH"
