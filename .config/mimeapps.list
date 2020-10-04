@@ -1,9 +1,11 @@
 [Default Applications]
 x-scheme-handler/mailto=gnome-gmail.desktop
-x-scheme-handler/http=org.midori_browser.Midori.desktop
-text/html=chromium.desktop
-x-scheme-handler/https=org.midori_browser.Midori.desktop
+x-scheme-handler/http=google-chrome-unstable.desktop
+text/html=google-chrome-unstable.desktop
+x-scheme-handler/https=google-chrome-unstable.desktop
 application/xhtml+xml=org.midori_browser.Midori.desktop
+x-scheme-handler/about=google-chrome-unstable.desktop
+x-scheme-handler/unknown=google-chrome-unstable.desktop
 
 [Added Associations]
 x-scheme-handler/mailto=org.gnome.Geary.desktop;gnome-gmail.desktop;

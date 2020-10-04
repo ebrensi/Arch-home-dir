@@ -45,6 +45,7 @@ output * background /usr/share/backgrounds/pop/nick-nazzaro-bedroom.png fill
 #
 # Montitor configuration:
 #
+output $hpLaptopDisplay scale 1
 
 bindswitch --reload --locked lid:on output $hpLaptopDisplay disable
 bindswitch --reload --locked lid:off output $hpLaptopDisplay enable
@@ -92,7 +93,7 @@ input "2:7:SynPS/2_Synaptics_TouchPad" {
 
     # Start launcher
     bindsym $mod+d exec $dmenu
-    bindsym $mod+Slash exec $rofimenu
+    bindsym $mod+Slash exec $wofimenu
 
     # Copy emojis to clipboard
     bindsym $mod+j exec $rofimoji
@@ -183,8 +184,6 @@ input "2:7:SynPS/2_Synaptics_TouchPad" {
 
     # cycle through border styles for current window
     bindsym $mod+t border toggle
-
-
 
     # You can "split" the current object of your focus with
     # $mod+b or $mod+v, for horizontal and vertical splits
