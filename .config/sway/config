@@ -95,7 +95,7 @@ bindswitch --reload --locked lid:off output LVDS-1 enable7
     bindsym $mod+Shift+j exec $emojipicker2
 
     # attempt to open mpv with a link in the clipboard
-    bindsym $mod+m exec mpv --ytdl $(wl-paste -n)
+    bindsym $mod+m exec mpv --gpu-context=wayland --ytdl $(wl-paste -n)
 
     bindsym Print exec $printscreen
 
@@ -304,3 +304,4 @@ exec blueman-applet
 exec psensor
 
 exec rmmod iwldvm
+

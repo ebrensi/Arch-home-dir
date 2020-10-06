@@ -4,7 +4,7 @@
     },
     "backup": false,
     "basename": true,
-    "colorscheme": "dukeubuntu-tc",
+    "colorscheme": "cobalt",
     "diffgutter": true,
     "ignorecase": true,
     "pluginchannels": [

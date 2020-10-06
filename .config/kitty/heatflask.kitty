@@ -1,9 +1,11 @@
 cd ~/Dropbox/Coding/Projects/Heatflask
+launch sh -c "tig; bash"
 
-launch tig
-
+new_os_window
 cd ~/Dropbox/Coding/Projects/Heatflask/frontend
-launch npm run watch
+launch sh -c "npm run watch; bash"
 
+new_os_window
 cd ~/Dropbox/Coding/Projects/Heatflask/backend
-launch bash -c 'source ~/.venv/heatflask/bin/activate; ./dev-run'
+launch sh -c "source ~/.venv/heatflask/bin/activate; ./dev-run; bash"
+
