@@ -1,6 +1,7 @@
 # This is the gitignore for my home desktop machine's /home directory repo
 
 wp*
+*.log
 
 .cache/
 .cargo/
@@ -11,9 +12,11 @@ wp*
 
 .elinks/globhist
 .elinks/gotohist
+.elinks/cookies
 
 .dillo/
 .fonts/
+.gnome/
 .gnupg/
 .ipython/
 .local/
@@ -80,6 +83,7 @@ package-lock.json
 .config/htop/
 .config/ibus/
 .config/luna/
+.config/menus
 
 .config/micro/backups/
 .config/micro/buffers/
