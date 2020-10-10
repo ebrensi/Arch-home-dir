@@ -77,7 +77,8 @@ package-lock.json
 # ignores for individual config directories
 .config/autostart/
 .config/BraveSoftware/
-.config/dconf/
+.config/dconf
+.config/gconf
 .config/Electron/
 
 .config/Min/
@@ -109,9 +110,10 @@ package-lock.json
 .config/netsurf/Cookies
 .config/netsurf/URLs
 
+.config/nnn/mounts
+.config/nnn/sessions
 .config/nnn/plugins/
-.config/nnn/mounts/
-.config/nnn/sessions/
+!.config/nnn/plugins/getplugs
 
 .config/plank/
 .config/pulse/

@@ -4,17 +4,27 @@
 #  Source this file to enable custom nnn features
 ##
 
-export VISUAL=$HOME/bin/ewrap
+export VISUAL=${XDG_CONFIG_HOME:-$HOME/.config}/nnn/ewrap
+export EDITOR=micro
+
+# For preview-tui
+if [ $TERM = "xterm-kitty" ]; then
+    export TERMIMAL="kitty"
+else
+    export TERMINAL="alacritty"
+fi
 
 # nnn settings via environment variables
 export LC_COLLATE="C"
 export NNN_BMS='c:~/.config;h:~/dev/heatflask;d:~/Downloads/'
-export NNN_PLUG='v:imgview;p:preview-tui;c:.cbcp;f:fzopen;l:launch;s:pskill;'
+export NNN_PLUG='v:imgview;p:preview-tui;f:fzopen;s:pskill;'
 export NNN_COLORS="2136"               # use a different color for each context
 export NNN_TRASH=1                     # trash (needs trash-cli) instead of delete
+export NNN_FIFO=/tmp/nnn.fifo
+
 # export NNN_FCOLORS='c1e2272e006033f7c6d6abc4'
 export NNN_OPENER="$HOME/.config/nnn/plugins/nuke"
-export NNN_OPTS="EAoac"
+export NNN_OPTS="EAco"
 
 # for nuke launcher
 export GUI=1
@@ -35,7 +45,7 @@ n ()
 
     NNN_TMPFILE="${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.lastd"
 
-    nnn -EAoac "$@"
+    nnn "$@"
 
     if [ -f "$NNN_TMPFILE" ]; then
             . "$NNN_TMPFILE"
