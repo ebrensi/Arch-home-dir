@@ -30,7 +30,7 @@ set $rofimoji rofimoji --copy-only
 # print screen function via script
 set $printscreen $HOME/.config/sway/screenshot
 
-set $toggleWaybar killall -SIGUSR1 swaybar
+set $toggleWaybar killall -SIGUSR1 waybar
 set $filePicker alacritty -t="filePicker" -e EDITOR=micro; nnn
 
 ### Output configuration
@@ -239,9 +239,9 @@ bindsym $mod+r mode "resize"
 #
 # Status Bar:
 #
-# bar {
-    # swaybar_command waybar
-# }
+bar {
+    swaybar_command waybar
+}
 
 
 
