@@ -1,2 +1,4 @@
 bind status P !git push
 
+set main-view-author = no
+set main-view-date=relative-compact
