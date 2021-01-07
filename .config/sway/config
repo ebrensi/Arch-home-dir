@@ -89,7 +89,7 @@ input "2:7:SynPS/2_Synaptics_TouchPad" {
 
     # Start launcher
     bindsym $mod+d exec $dmenu
-    bindsym $mod+Slash exec $rofimenu
+    bindsym $mod+Slash exec $wofimenu
 
     # Copy emojis to clipboard
     bindsym $mod+j exec $rofimoji

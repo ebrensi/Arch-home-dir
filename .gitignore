@@ -36,6 +36,7 @@ dev/heatflask/
 .config/font-manager/
 .config/fontconfig/
 .config/get-3.0/
+.config/google-chrome-unstable/
 .config/pulse
 .config/sublime-merge/
 .config/kak/plugins/

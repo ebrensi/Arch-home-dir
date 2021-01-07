@@ -4,7 +4,7 @@
     },
     "backup": false,
     "basename": true,
-    "colorscheme": "solarized",
+    "colorscheme": "dukeubuntu-tc",
     "diffgutter": true,
     "ignorecase": true,
     "pluginchannels": [
