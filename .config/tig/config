@@ -1,5 +1,7 @@
 bind status P !git push
 
-set refresh-mode = periodic
-set refresh-interval = 300
+set refresh-mode = auto
+
+set main-view-author = no
+set main-view-date-display = relative
 

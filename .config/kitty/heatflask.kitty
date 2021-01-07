@@ -1,5 +1,5 @@
 cd ~/Dropbox/Coding/Projects/Heatflask
-launch sh -c "tig; bash"
+launch sh -c "subl .; tig; bash"
 
 new_os_window
 cd ~/Dropbox/Coding/Projects/Heatflask/frontend
