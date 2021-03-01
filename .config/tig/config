@@ -1,2 +1,12 @@
-bind status P !git push
+# Push local changes to origin
+bind status P !git push %(remote)
+bind status F !git push %(remote) -f
 
+# Amend the last commit
+bind main + !git commit --amend
+bind status + !git commit --amend
+
+# Update (Pull) remotes changes from origin
+bind main U !git pull --rebase --autostash %(remote) %(branch)
+bind status U !git pull --rebase --autostash %(remote) %(branch)
+bind refs U !git pull --rebase --autostash %(remote) %(branch)
